@@ -2555,3 +2555,12 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     display: none;
   }
 }
+
+/* ============================================================
+   20. UNIVERSAL HEADER BANNER IMAGE
+   Applies the requested banner image to every page-title/header banner.
+   From this CSS file, ../images/bg.png resolves to assets/images/bg.png.
+   ============================================================ */
+.page-title {
+  background-image: url("../images/bg.png") !important;
+}
