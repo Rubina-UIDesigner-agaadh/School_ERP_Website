@@ -2564,3 +2564,258 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 .page-title {
   background-image: url("../images/bg.png") !important;
 }
+
+/* ============================================================
+   21. LANDING PAGE IMAGE OVERRIDES
+   Uses the new assets/images files inside the universal image system.
+   ============================================================ */
+.ast-home-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/hand phone.png") !important;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .ast-home-ecosystem-section .ast-home-wide-panel::before {
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.16), rgba(37, 99, 235, 0.20)), url("../images/totalEcosystem.png") !important;
+    background-position: center;
+  }
+}
+
+/* ============================================================
+   22. LANDING ECOSYSTEM IMAGE + UNIVERSAL CARD ELEMENT ALIGNMENT
+   Shows totalEcosystem.png fully without the blue square box behind it,
+   and centers card elements/icons/actions while keeping text left aligned.
+   ============================================================ */
+@media (min-width: 1200px) {
+  .ast-home-ecosystem-section .ast-home-wide-panel::before {
+    background-image: url("../images/totalEcosystem.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .ast-home-ecosystem-section .ast-home-wide-panel::after {
+    display: none !important;
+  }
+}
+
+.main section:not(.hero) :is(a, div)[class$="-card"]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card),
+.main section:not(.hero) :is(a, div)[class*="-card "]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main section:not(.hero) :is(a, div)[class$="-card"]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) :is(h1, h2, h3, h4, h5, h6, p, ul, ol, .fi-card-body),
+.main section:not(.hero) :is(a, div)[class*="-card "]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) :is(h1, h2, h3, h4, h5, h6, p, ul, ol, .fi-card-body) {
+  width: 100%;
+  text-align: left;
+}
+
+.main section:not(.hero) :is(a, div)[class$="-card"]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) > :is(i, .icon-wrap, .fi-card-number, .fi-integration-badge),
+.main section:not(.hero) :is(a, div)[class*="-card "]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) > :is(i, .icon-wrap, .fi-card-number, .fi-integration-badge),
+.main section:not(.hero) :is(a, div)[class$="-card"]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) > span:first-child:not(.fi-card-action),
+.main section:not(.hero) :is(a, div)[class*="-card "]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) > span:first-child:not(.fi-card-action) {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fi-card-action,
+.resource-card > a,
+.product-service-card > a,
+.overview-card > a {
+  align-self: center;
+}
+
+/* ============================================================
+   23. UNIVERSAL CARD GROUP CENTERING
+   Centers the group/container of cards horizontally without changing
+   typography or text alignment inside the cards.
+   ============================================================ */
+.main .row:has(> [class*="col-"] > :is(
+  [class$="-card"], [class*="-card "],
+  [class$="-panel"], [class*="-panel "],
+  .content-box,
+  .contact-form-container,
+  .contact-sidebar,
+  .brochure-form-card
+)) {
+  justify-content: center;
+}
+
+.main div:is(
+  .ast-home-card-grid,
+  .ast-home-chip-grid,
+  .ast-home-showcase-grid,
+  .ast-home-process-grid,
+  .fi-card-grid,
+  .three-column-grid,
+  .institution-benefits-grid,
+  .approach-panel-grid,
+  .approach-principles-grid,
+  .custom-erp-grid,
+  .why-ast-grid,
+  .preschool-why-grid,
+  .admission-lifecycle-grid,
+  .stats-grid,
+  .ast-stats-grid,
+  .school-type-grid,
+  [class$="-feature-grid"], [class*="-feature-grid "],
+  [class$="-card-grid"], [class*="-card-grid "],
+  [class$="-type-grid"], [class*="-type-grid "]
+) {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main div:is(
+  .ast-home-card-grid,
+  .ast-home-chip-grid,
+  .ast-home-showcase-grid,
+  .ast-home-process-grid,
+  .fi-card-grid,
+  .three-column-grid,
+  .institution-benefits-grid,
+  .approach-panel-grid,
+  .approach-principles-grid,
+  .custom-erp-grid,
+  .why-ast-grid,
+  .preschool-why-grid,
+  .admission-lifecycle-grid,
+  .stats-grid,
+  .ast-stats-grid,
+  .school-type-grid,
+  [class$="-feature-grid"], [class*="-feature-grid "],
+  [class$="-card-grid"], [class*="-card-grid "],
+  [class$="-type-grid"], [class*="-type-grid "]
+) > * {
+  width: 100%;
+  flex: 0 1 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 576px) {
+  .main div:is(
+    .ast-home-card-grid,
+    .ast-home-showcase-grid,
+    .ast-home-process-grid,
+    .fi-card-grid,
+    .three-column-grid,
+    .institution-benefits-grid,
+    .approach-panel-grid,
+    .approach-principles-grid,
+    .custom-erp-grid,
+    .why-ast-grid,
+    .preschool-why-grid,
+    .admission-lifecycle-grid,
+    .stats-grid,
+    .ast-stats-grid,
+    [class$="-feature-grid"], [class*="-feature-grid "],
+    [class$="-card-grid"], [class*="-card-grid "]
+  ) > * {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+
+  .main div:is(
+    .ast-home-chip-grid,
+    .school-type-grid,
+    [class$="-type-grid"], [class*="-type-grid "]
+  ) > * {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .main div:is(
+    .ast-home-card-grid,
+    .ast-home-showcase-grid,
+    .ast-home-process-grid,
+    .fi-card-grid,
+    .three-column-grid,
+    .institution-benefits-grid,
+    .approach-panel-grid,
+    .approach-principles-grid,
+    .custom-erp-grid,
+    .why-ast-grid,
+    .preschool-why-grid,
+    .admission-lifecycle-grid,
+    .stats-grid,
+    .ast-stats-grid,
+    [class$="-feature-grid"], [class*="-feature-grid "],
+    [class$="-card-grid"], [class*="-card-grid "]
+  ) > * {
+    flex-basis: calc((100% - 36px) / 3);
+  }
+
+  .main div:is(
+    .ast-home-chip-grid,
+    .school-type-grid,
+    [class$="-type-grid"], [class*="-type-grid "]
+  ) > * {
+    flex-basis: calc((100% - 54px) / 4);
+  }
+}
+
+@media (min-width: 1400px) {
+  .main div:is(
+    .ast-home-card-grid,
+    .ast-home-showcase-grid,
+    .ast-home-process-grid,
+    .fi-card-grid,
+    .three-column-grid,
+    .institution-benefits-grid,
+    .approach-panel-grid,
+    .approach-principles-grid,
+    .custom-erp-grid,
+    .why-ast-grid,
+    .preschool-why-grid,
+    .admission-lifecycle-grid,
+    [class$="-feature-grid"], [class*="-feature-grid "],
+    [class$="-card-grid"], [class*="-card-grid "]
+  ) > * {
+    flex-basis: calc((100% - 54px) / 4);
+  }
+
+  .main div:is(
+    .ast-home-chip-grid,
+    .school-type-grid,
+    [class$="-type-grid"], [class*="-type-grid "]
+  ) > * {
+    flex-basis: calc((100% - 72px) / 5);
+  }
+}
+
+.main div:is(
+  .ast-home-card-grid,
+  .ast-home-chip-grid,
+  .ast-home-showcase-grid,
+  .ast-home-process-grid,
+  .fi-card-grid,
+  .three-column-grid,
+  .institution-benefits-grid,
+  .approach-panel-grid,
+  .approach-principles-grid,
+  .custom-erp-grid,
+  .why-ast-grid,
+  .preschool-why-grid,
+  .admission-lifecycle-grid,
+  .school-type-grid,
+  [class$="-feature-grid"], [class*="-feature-grid "],
+  [class$="-card-grid"], [class*="-card-grid "],
+  [class$="-type-grid"], [class*="-type-grid "]
+) > :is([class$="-wide-card"], [class*="-wide-card "], [class$="-wide-panel"], [class*="-wide-panel "]) {
+  flex-basis: 100%;
+}
+
