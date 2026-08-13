@@ -11,7 +11,6 @@
 /* ============================================================
    1. DESIGN TOKENS & ROOT VARIABLES
    ============================================================ */
-
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
   --heading-font: "Lato", sans-serif;
@@ -28,14 +27,13 @@
   --accent-dark: #1d4ed8;
   --accent-soft: #dbeafe;
   --contrast-color: #ffffff;
-
   --border-color: #e2e8f0;
+
   --card-bg: #ffffff;
   --card-bg-soft: #f8fbff;
   --card-bg-alt: #f8fafc;
   --card-border: #e2e8f0;
   --card-border-hover: #bfdbfe;
-
   --shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
   --card-shadow: 0 14px 38px rgba(15, 23, 42, 0.07);
   --card-shadow-hover: 0 20px 48px rgba(37, 99, 235, 0.12);
@@ -62,7 +60,6 @@
 /* ============================================================
    2. RESET & BASE
    ============================================================ */
-
 *,
 *::before,
 *::after {
@@ -139,7 +136,6 @@ button {
 /* ============================================================
    3. UTILITIES
    ============================================================ */
-
 .dark-background {
   --background-color: #0f172a;
   --surface-color: #1e293b;
@@ -165,7 +161,6 @@ button {
 /* ============================================================
    4. HEADER & NAVIGATION
    ============================================================ */
-
 .header {
   z-index: 997;
   padding: 14px 0;
@@ -323,7 +318,6 @@ button {
 /* ============================================================
    5. MEGA MENU
    ============================================================ */
-
 .mega-menu-item {
   position: relative !important;
 }
@@ -490,7 +484,6 @@ button {
 /* ============================================================
    6. HERO SECTION
    ============================================================ */
-
 .hero {
   position: relative;
   min-height: 100vh;
@@ -648,7 +641,6 @@ button {
 /* ============================================================
    7. SECTIONS, TITLES & PAGE BANNER
    ============================================================ */
-
 .section {
   position: relative;
   padding: 80px 0;
@@ -780,7 +772,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    8. UNIVERSAL PANEL SYSTEM FOR EXISTING PAGE CLASSES
    ============================================================ */
-
 .main section:not(.hero) :is([class$="-panel"], [class*="-panel "]) {
   height: 100%;
   padding: 34px;
@@ -857,7 +848,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 }
 
 /* Intro panels with visual image */
-
 .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel) {
   position: relative;
   min-height: 360px;
@@ -901,17 +891,13 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 }
 
 /* Page visual images */
-
 .about-page-body,
+.about-ast-page-body,
 .why-ast-page-body,
 .benefits-to-you-page-body,
 .our-approach-page-body,
 .option-detail-body {
   --page-visual: url("../img/about/about-1.webp");
-}
-
-.about-ast-page-body {
-  --page-visual: url("../images/floating laptop.png");
 }
 
 .school-erp-page-body,
@@ -968,7 +954,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    9. UNIVERSAL CARD SYSTEM FOR EXISTING PAGE CLASSES
    ============================================================ */
-
 .main section:not(.hero) :is(a, div)[class$="-card"]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card),
 .main section:not(.hero) :is(a, div)[class*="-card "]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card) {
   height: 100%;
@@ -1044,7 +1029,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    10. GRID SYSTEM
    ============================================================ */
-
 .main div[class$="-grid"],
 .main div[class*="-grid "] {
   display: grid;
@@ -1094,7 +1078,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    11. LISTS, STATS, IMAGE & CONTENT HELPERS
    ============================================================ */
-
 .main section:not(.hero) :is([class$="-panel"], [class*="-panel "]) ul,
 .check-list {
   list-style: none;
@@ -1281,7 +1264,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    12. FEATURES & INTEGRATION PAGE
    ============================================================ */
-
 .fi-overview-section {
   padding-bottom: 40px;
 }
@@ -1405,7 +1387,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    13. FAQ
    ============================================================ */
-
 .faq-wrapper {
   max-width: 980px;
   margin: auto;
@@ -1498,7 +1479,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    14. CONTACT & FORMS
    ============================================================ */
-
 .contact-form-container,
 .contact-sidebar,
 .brochure-form-card {
@@ -1643,7 +1623,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    15. BUTTONS
    ============================================================ */
-
 .btn,
 .send-button {
   display: inline-flex;
@@ -1715,7 +1694,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    16. FOOTER
    ============================================================ */
-
 .footer {
   padding: 72px 0 0;
   background: #0f172a;
@@ -1825,7 +1803,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    17. FLOATING CONTACT TABS, SCROLL TOP & PRELOADER
    ============================================================ */
-
 .floating-contact-tabs {
   position: fixed;
   top: 50%;
@@ -1978,7 +1955,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 /* ============================================================
    18. RESPONSIVE
    ============================================================ */
-
 @media (max-width: 1399px) and (min-width: 1200px) {
   .navmenu a,
   .navmenu .mega-menu-toggle {
@@ -1986,13 +1962,16 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     padding-right: 10px !important;
     font-size: 13px !important;
   }
+
   .nav-wrap {
     padding-left: 10px;
     padding-right: 10px;
   }
+
   .navmenu ul {
     gap: 4px;
   }
+
   .nav-home-logo {
     width: 38px;
     height: 38px;
@@ -2005,18 +1984,22 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .header {
     padding: 12px 0;
   }
+
   .header-nav-row {
     justify-content: space-between;
   }
+
   .nav-wrap {
     display: none;
     padding: 14px;
     border-radius: 14px;
     background: #ffffff;
   }
+
   .mobile-nav-active {
     overflow: hidden;
   }
+
   .mobile-nav-active .header .nav-wrap,
   .mobile-nav-active .nav-wrap {
     display: block !important;
@@ -2026,10 +2009,12 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     overflow: auto !important;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25) !important;
   }
+
   .navmenu > ul,
   .mobile-nav-active .navmenu ul {
     display: block !important;
   }
+
   .navmenu a,
   .navmenu .mega-menu-toggle {
     width: 100% !important;
@@ -2040,6 +2025,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     min-height: 44px !important;
     font-size: 16px !important;
   }
+
   .navmenu a:hover,
   .navmenu a.active,
   .navmenu .mega-menu-toggle:hover,
@@ -2048,18 +2034,21 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     background: #dbeafe !important;
     color: #1d4ed8 !important;
   }
+
   .home-logo-link,
   .home-logo-link.active,
   .home-logo-link:hover {
     justify-content: flex-start !important;
     padding: 10px 14px !important;
   }
+
   .nav-home-logo {
     width: 40px;
     height: 40px;
     max-width: 40px;
     max-height: 40px;
   }
+
   .mega-menu-panel,
   .mega-feature-panel,
   .mega-menu-item:hover > .mega-menu-panel,
@@ -2077,13 +2066,16 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     display: none !important;
     margin: 8px 0 12px !important;
   }
+
   .mega-menu-item.mega-open > .mega-menu-panel,
   .mega-menu-item.mega-open > .mega-feature-panel {
     display: block !important;
   }
+
   .mega-menu-panel::before {
     display: none;
   }
+
   .mega-panel-inner {
     max-height: none !important;
     overflow: visible !important;
@@ -2092,46 +2084,57 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     background: #ffffff !important;
     box-shadow: none !important;
   }
+
   .mega-panel-columns {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
+
   .mega-feature-list {
     display: flex !important;
     flex-direction: column !important;
   }
+
   .mega-link,
   a.mega-link {
     font-size: 0.98rem !important;
     padding: 7px 0 !important;
   }
+
   .hero {
     padding: 170px 0 80px;
   }
+
   .hero-slider-control {
     width: 46px;
     height: 46px;
   }
+
   .hero-slider-prev { left: 14px; }
   .hero-slider-next { right: 14px; }
+
   .fi-feature-grid,
   .fi-integration-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .main div:is(.ast-home-chip-grid, .ast-home-showcase-grid, [class$="-type-grid"], [class*="-type-grid "], .school-type-grid) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .floating-contact-tab {
     width: 232px;
     min-height: 56px;
     border-radius: 14px 0 0 14px;
     transform: translateX(calc(100% - 56px));
   }
+
   .floating-tab-icon {
     flex-basis: 56px;
     width: 56px;
     min-height: 56px;
   }
+
   .floating-tab-icon i {
     font-size: 1.35rem;
   }
@@ -2141,34 +2144,43 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .section {
     padding: 70px 0;
   }
+
   .section-title h2,
   .fi-section-heading h2 {
     font-size: 1.9rem;
   }
+
   .page-title {
     padding: 155px 0 75px;
   }
+
   .page-title h1 {
     font-size: 2.35rem;
   }
+
   .hero h1 {
     font-size: 2.7rem;
   }
+
   .hero-content-card {
     padding: 34px 24px;
   }
+
   .quote-card,
   .ast-quote-card {
     position: static;
     margin-top: 20px;
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel) {
     min-height: auto;
     padding-right: 28px !important;
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel)::before {
     display: none;
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel)::after {
     position: relative;
     inset: auto;
@@ -2179,9 +2191,11 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     margin-top: 24px;
     border-radius: var(--radius-lg);
   }
+
   .main section:not(.hero) :is([class$="-panel"], [class*="-panel "]) h2 {
     font-size: 1.9rem;
   }
+
   .main div:is([class$="-feature-grid"], [class*="-feature-grid "], [class$="-card-grid"], [class*="-card-grid "], .three-column-grid, .institution-benefits-grid, .approach-principles-grid, .custom-erp-grid, .ast-home-process-grid, .admission-lifecycle-grid, .why-ast-grid, .preschool-why-grid),
   .main div.approach-panel-grid,
   .stats-grid,
@@ -2190,19 +2204,23 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .main section:not(.hero) :is([class$="-list-panel"], [class*="-list-panel "]) ul {
     grid-template-columns: 1fr;
   }
+
   .fi-overview-panel {
     grid-template-columns: 1fr !important;
   }
+
   .stakeholder-row {
     grid-template-columns: 1fr;
     gap: 6px;
   }
+
   .footer-content,
   .footer-contact,
   .footer-bottom,
   .footer .text-lg-end {
     text-align: center;
   }
+
   .footer-bottom-links {
     justify-content: center;
   }
@@ -2212,38 +2230,48 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .section {
     padding: 60px 0;
   }
+
   .section-title {
     margin-bottom: 36px;
   }
+
   .section-title h2 {
     font-size: 1.85rem;
   }
+
   .page-title {
     padding: 145px 0 70px;
   }
+
   .page-title h1 {
     font-size: 2.15rem;
   }
+
   .hero {
     min-height: auto;
     padding: 145px 0 72px;
   }
+
   .hero-content-card {
     padding: 28px 18px;
     border-radius: 22px;
   }
+
   .hero-slider-control {
     top: auto;
     bottom: 80px;
     width: 42px;
     height: 42px;
   }
+
   .hero-slider-control:hover {
     transform: scale(1.06);
   }
+
   .hero-slider-prev { left: 22px; }
   .hero-slider-next { right: 22px; }
   .hero-slider-dots { bottom: 28px; }
+
   .contact-form-container,
   .contact-sidebar,
   .brochure-form-card,
@@ -2254,18 +2282,23 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     padding: 26px;
     border-radius: var(--radius-lg);
   }
+
   .faq-header {
     padding: 18px;
   }
+
   .content-inner {
     padding: 0 22px;
   }
+
   .faq-item.faq-active .content-inner {
     padding-bottom: 20px;
   }
+
   main.main > section.section:not(.hero):not(.dark-background) {
     border-top: 1px solid rgba(226, 232, 240, 0.9);
   }
+
   [data-aos-delay] {
     transition-delay: 0s !important;
   }
@@ -2275,50 +2308,62 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .hero h1 {
     font-size: 2.1rem;
   }
+
   .hero p {
     font-size: 1rem;
   }
+
   .hero-buttons .btn {
     width: 100%;
   }
+
   .section-title,
   .fi-section-heading {
     margin-bottom: 34px;
   }
+
   .main div:is(.ast-home-chip-grid, .ast-home-showcase-grid, [class$="-type-grid"], [class*="-type-grid "], .school-type-grid),
   .fi-feature-grid,
   .fi-integration-grid,
   .fi-overview-stats {
     grid-template-columns: 1fr;
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel) {
     padding-right: 24px !important;
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel)::after {
     height: 200px;
   }
+
   .floating-contact-tabs {
     top: auto;
     bottom: 88px;
     transform: none;
   }
+
   .floating-contact-tab {
     width: 220px;
     min-height: 52px;
     transform: translateX(calc(100% - 52px));
   }
+
   .floating-contact-tab:hover,
   .floating-contact-tab:focus {
     transform: translateX(0);
   }
+
   .floating-tab-icon {
     flex-basis: 52px;
     width: 52px;
     min-height: 52px;
   }
+
   .floating-tab-content {
     padding: 8px 12px;
   }
+
   .floating-tab-content strong { font-size: 0.9rem; }
   .floating-tab-content small { font-size: 0.72rem; }
 }
@@ -2328,7 +2373,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
    Reduces empty side space on large screens, makes cards use more
    available width, and adds visual placeholders to wide/closing panels.
    ============================================================ */
-
 @media (min-width: 1400px) {
   .container,
   .container-sm,
@@ -2338,13 +2382,16 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .container-xxl {
     max-width: min(92vw, 1500px);
   }
+
   .section-title,
   .fi-section-heading {
     max-width: 980px;
   }
+
   .main section:not(.hero) :is([class$="-panel"], [class*="-panel "]) {
     padding: 38px;
   }
+
   .main section:not(.hero) :is(
     [class$="-intro-panel"], [class*="-intro-panel "],
     [class$="-info-panel"], [class*="-info-panel "],
@@ -2357,6 +2404,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   ) {
     max-width: min(100%, 1320px);
   }
+
   .main section:not(.hero) :is(
     [class$="-feature-grid"], [class*="-feature-grid "],
     [class$="-card-grid"], [class*="-card-grid "],
@@ -2371,12 +2419,15 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   ) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
   .main div.approach-panel-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
   .main div:is(.ast-home-chip-grid, .ast-home-showcase-grid, [class$="-type-grid"], [class*="-type-grid "], .school-type-grid) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+
   .fi-feature-grid,
   .fi-integration-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2392,6 +2443,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .container-xxl {
     max-width: min(90vw, 1620px);
   }
+
   .main section:not(.hero) :is(
     [class$="-intro-panel"], [class*="-intro-panel "],
     [class$="-info-panel"], [class*="-info-panel "],
@@ -2410,18 +2462,21 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel) {
     padding: 48px min(39%, 500px) 48px 48px !important;
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel)::before {
     right: 22px;
     top: 22px;
     width: min(38%, 500px);
     height: calc(100% - 44px);
   }
+
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel)::after {
     right: 38px;
     top: 38px;
     width: min(33%, 430px);
     height: calc(100% - 76px);
   }
+
   .main section:not(.hero) :is(
     [class$="-closing-panel"], [class*="-closing-panel "],
     [class$="-wide-panel"], [class*="-wide-panel "],
@@ -2432,6 +2487,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     overflow: hidden;
     padding-right: min(34%, 410px) !important;
   }
+
   .main section:not(.hero) :is(
     [class$="-closing-panel"], [class*="-closing-panel "],
     [class$="-wide-panel"], [class*="-wide-panel "],
@@ -2441,6 +2497,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     position: relative;
     z-index: 2;
   }
+
   .main section:not(.hero) :is(
     [class$="-closing-panel"], [class*="-closing-panel "],
     [class$="-wide-panel"], [class*="-wide-panel "],
@@ -2461,6 +2518,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     border: 1px solid rgba(219, 234, 254, 0.9);
     box-shadow: 0 20px 50px rgba(15, 23, 42, 0.14);
   }
+
   .main section:not(.hero) :is(
     [class$="-closing-panel"], [class*="-closing-panel "],
     [class$="-wide-panel"], [class*="-wide-panel "],
@@ -2503,7 +2561,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
    Applies the requested banner image to every page-title/header banner.
    From this CSS file, ../images/bg.png resolves to assets/images/bg.png.
    ============================================================ */
-
 .page-title {
   background-image: url("../images/bg.png") !important;
 }
@@ -2512,7 +2569,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
    21. LANDING PAGE IMAGE OVERRIDES
    Uses the new assets/images files inside the universal image system.
    ============================================================ */
-
 .ast-home-intro-panel::after {
   background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/hand phone.png") !important;
   background-position: center;
@@ -2525,23 +2581,11 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   }
 }
 
-/* Landing closing panel: heading + text only, no side visual */
-@media (min-width: 1200px) {
-  .ast-home-closing-section .ast-home-closing-panel {
-    padding-right: 34px !important;
-  }
-  .ast-home-closing-section .ast-home-closing-panel::before,
-  .ast-home-closing-section .ast-home-closing-panel::after {
-    display: none !important;
-  }
-}
-
 /* ============================================================
    22. LANDING ECOSYSTEM IMAGE + UNIVERSAL CARD ELEMENT ALIGNMENT
    Shows totalEcosystem.png fully without the blue square box behind it,
    and centers card elements/icons/actions while keeping text left aligned.
    ============================================================ */
-
 @media (min-width: 1200px) {
   .ast-home-ecosystem-section .ast-home-wide-panel::before {
     background-image: url("../images/totalEcosystem.png") !important;
@@ -2553,6 +2597,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     border-radius: 0 !important;
     box-shadow: none !important;
   }
+
   .ast-home-ecosystem-section .ast-home-wide-panel::after {
     display: none !important;
   }
@@ -2592,7 +2637,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
    Centers the group/container of cards horizontally without changing
    typography or text alignment inside the cards.
    ============================================================ */
-
 .main .row:has(> [class*="col-"] > :is(
   [class$="-card"], [class*="-card "],
   [class$="-panel"], [class*="-panel "],
@@ -2683,6 +2727,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   ) > * {
     flex-basis: calc((100% - 18px) / 2);
   }
+
   .main div:is(
     .ast-home-chip-grid,
     .school-type-grid,
@@ -2713,6 +2758,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   ) > * {
     flex-basis: calc((100% - 36px) / 3);
   }
+
   .main div:is(
     .ast-home-chip-grid,
     .school-type-grid,
@@ -2741,6 +2787,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   ) > * {
     flex-basis: calc((100% - 54px) / 4);
   }
+
   .main div:is(
     .ast-home-chip-grid,
     .school-type-grid,
@@ -2770,4 +2817,287 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   [class$="-type-grid"], [class*="-type-grid "]
 ) > :is([class$="-wide-card"], [class*="-wide-card "], [class$="-wide-panel"], [class*="-wide-panel "]) {
   flex-basis: 100%;
+}
+
+
+/* ============================================================
+   24. HOMEPAGE FINAL CTA IMAGE
+   Replaces the Ready to Transform Your School Management panel image.
+   ============================================================ */
+@media (min-width: 1200px) {
+  .ast-home-closing-section .ast-home-closing-panel::before {
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.14), rgba(37, 99, 235, 0.18)), url("../images/school.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+/* ============================================================
+   25. WHY AST PAGE INTRO PANEL IMAGE
+   Replaces the Why AST School ERP? panel image with assets/images/Why_AST.png.
+   ============================================================ */
+.why-ast-main-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Why_AST.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   26. BENEFITS TO YOU PAGE INTRO PANEL IMAGE
+   Replaces the Benefits to You panel image with assets/images/benefits_to_you.png.
+   ============================================================ */
+.benefits-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/benefits_to_you.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   27. OUR APPROACH PAGE INTRO PANEL IMAGE
+   Replaces the Our Approach panel image with assets/images/Our_Approach.png.
+   ============================================================ */
+.approach-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Our_Approach.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   28. PRODUCT AND ADMISSION PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.school-erp-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/school.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.preschool-erp-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Preschool_ERP.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.admission-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/admission.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   29. ABOUT AST SCHOOL ERP PAGE INTRO PANEL IMAGE
+   Replaces the About AST School ERP panel image with assets/images/floating laptop.png.
+   ============================================================ */
+.about-ast-main-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/floating laptop.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   30. ATTENDANCE, TIMETABLE AND CERTIFICATE PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.attendance-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Attendance_module.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.timetable-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Timetable_Module.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.certificate-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Certificate.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   31. EMPLOYEE LEAVE, ACADEMIC AND FRONT OFFICE PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.employee-leave-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Employee_Leave.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.academic-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Academic.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.front-office-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Front_Office.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   32. MIS, TRANSPORT AND LIBRARY PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.mis-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/MIS.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.transport-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Transport.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.library-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Library.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   33. ASSET, FEES AND STUDENT ASSESSMENTS PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.asset-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Assets.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fees-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Fee_management.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.assessments-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Student_Assessment.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   34. STUDENT, HR AND PAYROLL PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.student-management-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Student_management.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hr-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/HR_Management.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.payroll-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Payroll.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   35. EVENT ACTIVITY, HEALTH AND ACCOUNTING PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.event-activity-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Event_Activity.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.health-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Health.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.accounting-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Accounting.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   36. INVENTORY, HOSTEL AND CUSTOM MODULE PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.inventory-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Inventory.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hostel-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Hostel.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-erp-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Custom_Module.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   37. SMS, EMAIL AND WHATSAPP INTEGRATION PAGE INTRO PANEL IMAGES
+   Replaces selected intro panel images with assets/images files.
+   ============================================================ */
+.sms-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/SMS.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.email-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Email.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.whatsapp-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Whatsapp.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
