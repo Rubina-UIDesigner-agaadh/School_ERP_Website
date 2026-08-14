@@ -3867,7 +3867,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 }
 
 .whatsapp-intro-panel::after {
-  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Whatsapp.png") !important;
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Whatsapp.jpeg") !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
