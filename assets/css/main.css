@@ -96,6 +96,34 @@
   --ui-transition-normal: 0.25s ease;
   --ui-transition-slow: 0.35s ease;
 
+  /* Animations & Motion */
+  --ui-animation-fast: 0.15s;
+  --ui-animation-normal: 0.25s;
+  --ui-animation-slow: 0.35s;
+  --ui-easing-default: cubic-bezier(0.25, 0.8, 0.25, 1);
+  --ui-easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ui-transition-hero-fade: 1000ms ease;
+  --ui-transition-hero-zoom: 6500ms ease;
+
+  /* Breakpoints */
+  --ui-breakpoint-xs: 0;
+  --ui-breakpoint-sm: 576px;
+  --ui-breakpoint-md: 768px;
+  --ui-breakpoint-lg: 992px;
+  --ui-breakpoint-xl: 1200px;
+  --ui-breakpoint-xxl: 1400px;
+
+  /* Component Dimensions */
+  --ui-header-height: 80px;
+  --ui-mobile-header-height: 70px;
+  --ui-btn-height: 48px;
+  --ui-btn-height-sm: 38px;
+  --ui-input-height: 48px;
+  --ui-sidebar-width: 280px;
+  --ui-modal-max-width: 500px;
+  --ui-container-max-width: 1200px;
+  --ui-content-max-width: 1500px;
+
   /* Focus Ring & Page Visuals */
   --ui-focus-ring: 0 0 0 4px rgba(37, 99, 235, 0.16);
   --ui-page-visual: url("../img/features/features-1.webp");
@@ -191,7 +219,7 @@ body {
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition: color var(--ui-transition-normal), background var(--ui-transition-normal), border-color var(--ui-transition-normal), box-shadow var(--ui-transition-normal), transform var(--ui-transition-normal);
 }
 
 a:hover {
@@ -273,7 +301,7 @@ button {
   padding: 14px 0;
   background: rgba(15, 23, 42, 0.18);
   backdrop-filter: blur(12px);
-  transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+  transition: background var(--ui-transition-slow), box-shadow var(--ui-transition-slow), padding var(--ui-transition-slow);
 }
 
 .scrolled .header,
@@ -305,7 +333,7 @@ button {
   max-height: 42px;
   object-fit: contain;
   border-radius: 10px;
-  transition: transform 0.25s ease;
+  transition: transform var(--ui-transition-normal);
 }
 
 .logo .sitename {
@@ -373,7 +401,7 @@ button {
   line-height: 1.1;
   white-space: nowrap;
   text-decoration: none;
-  transition: 0.25s ease;
+  transition: var(--ui-transition-normal);
 }
 
 .navmenu a:hover,
@@ -432,7 +460,7 @@ button {
 .mega-menu-toggle i {
   font-size: 11px;
   line-height: 1;
-  transition: transform 0.25s ease;
+  transition: transform var(--ui-transition-normal);
 }
 
 .mega-menu-item.mega-open > .mega-menu-toggle i {
@@ -451,7 +479,7 @@ button {
   visibility: hidden !important;
   pointer-events: none !important;
   transform: translateY(12px) !important;
-  transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease !important;
+  transition: opacity var(--ui-transition-normal), visibility var(--ui-transition-normal), transform var(--ui-transition-normal) !important;
 }
 
 .mega-feature-panel {
@@ -570,7 +598,7 @@ button {
   text-align: left !important;
   white-space: normal !important;
   text-decoration: none !important;
-  transition: color 0.2s ease, transform 0.2s ease !important;
+  transition: color var(--ui-transition-fast), transform var(--ui-transition-fast) !important;
 }
 
 .mega-link i {
@@ -618,7 +646,7 @@ button {
   background-position: center;
   opacity: 0;
   transform: scale(1.08);
-  transition: opacity 1000ms ease, transform 6500ms ease;
+  transition: opacity var(--ui-transition-hero-fade), transform var(--ui-transition-hero-zoom);
   will-change: opacity, transform;
 }
 
@@ -699,7 +727,7 @@ button {
   transform: translateY(-50%);
   backdrop-filter: blur(8px);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
-  transition: 0.25s ease;
+  transition: var(--ui-transition-normal);
 }
 
 .hero-slider-control i {
@@ -735,7 +763,7 @@ button {
   border: 2px solid rgba(255, 255, 255, 0.68);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.36);
-  transition: 0.25s ease;
+  transition: var(--ui-transition-normal);
 }
 
 .hero-slider-dots button.is-active {
@@ -1072,7 +1100,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   box-shadow: var(--card-shadow);
   color: inherit;
   text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform var(--ui-transition-normal), box-shadow var(--ui-transition-normal), border-color var(--ui-transition-normal);
 }
 
 .main section:not(.hero) :is(a, div)[class$="-card"]:not(.image-card):not(.ast-about-image-card):not(.quote-card):not(.ast-quote-card):not(.brochure-form-card):nth-child(even),
@@ -1484,7 +1512,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 
 .fi-card-action i {
   line-height: 1;
-  transition: transform 0.25s ease;
+  transition: transform var(--ui-transition-normal);
 }
 
 .fi-card:hover .fi-card-action i {
@@ -1552,7 +1580,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 
 .faq-toggle i {
   position: absolute;
-  transition: 0.2s ease;
+  transition: var(--ui-transition-fast);
 }
 
 .faq-item .bi-dash { opacity: 0; }
@@ -1562,7 +1590,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 .faq-content {
   display: grid;
   grid-template-rows: 0fr;
-  transition: 0.3s ease;
+  transition: var(--ui-transition-normal);
 }
 
 .faq-item.faq-active .faq-content {
@@ -1630,7 +1658,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   background: #ffffff;
   padding: 13px 14px;
   color: var(--default-color);
-  transition: 0.2s ease;
+  transition: var(--ui-transition-fast);
 }
 
 .form-field input:focus,
@@ -1739,7 +1767,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   border-radius: 9px;
   padding: 12px 28px;
   font-weight: 900;
-  transition: 0.25s ease;
+  transition: var(--ui-transition-normal);
 }
 
 .btn-primary,
@@ -1766,7 +1794,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 .brochure-download-button span {
   display: inline-block;
   margin-left: 8px;
-  transition: transform 0.25s ease;
+  transition: transform var(--ui-transition-normal);
 }
 
 .send-button:hover span,
@@ -1933,7 +1961,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   overflow: hidden;
   transform: translateX(calc(100% - 60px));
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
-  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.25s ease, filter 0.25s ease;
+  transition: transform var(--ui-transition-slow), box-shadow var(--ui-transition-normal), filter var(--ui-transition-normal);
 }
 
 .floating-contact-tab:hover,
@@ -2007,7 +2035,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: 0.25s ease;
+  transition: var(--ui-transition-normal);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2033,7 +2061,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   inset: 0;
   z-index: 999999;
   background: #ffffff;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  transition: opacity var(--ui-transition-slow), visibility var(--ui-transition-slow);
 }
 
 #preloader::before {
@@ -2949,6 +2977,25 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* ============================================================
+   39. ACCESSIBILITY & REDUCED MOTION SUPPORT
+   Globally disables/reduces non-essential transitions and animations
+   for users who have requested reduced motion.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: scroll !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
 }
 
 
