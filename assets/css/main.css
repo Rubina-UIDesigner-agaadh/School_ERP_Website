@@ -2979,6 +2979,62 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   background-position: center;
 }
 
+.online-payment-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Online_payment.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tally-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Tally.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gps-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/GPS.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.barcode-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Barcode.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.biometric-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Biometric.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.google-apps-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Google.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.microsoft-tools-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Microsoft.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mobile-apps-intro-panel::after {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Mobile_App.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* ============================================================
    39. ACCESSIBILITY & REDUCED MOTION SUPPORT
    Globally disables/reduces non-essential transitions and animations
