@@ -3033,6 +3033,134 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   background-position: center;
 }
 
+/* ============================================================
+   40. RESTRUCTURED BOTTOM PANELS (SINGLE-COLUMN CENTERED)
+   ============================================================ */
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) {
+  padding: 40px 34px !important;
+  text-align: center !important;
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  border: 1px solid var(--card-border) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+)::before,
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+)::after {
+  display: none !important;
+}
+
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) :is(span, [class*="-section-label"], [class$="-section-label"]) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 20px !important;
+}
+
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) h2 {
+  margin-bottom: 20px !important;
+  text-align: center !important;
+}
+
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) p {
+  text-align: center !important;
+  max-width: 720px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.8 !important;
+}
+
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) .btn,
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) a[class*="btn"] {
+  margin-top: 28px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ============================================================
+   38. HOME / SUPPORT SECTION REFINEMENTS
+   ============================================================ */
+.ast-home-support-section .subtitle {
+  margin-bottom: 28px;
+}
+
+.ast-home-support-section .col-lg-5 > p {
+  max-width: 420px;
+}
+
 .online-payment-intro-panel::after {
   background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.18), rgba(37, 99, 235, 0.18)), url("../images/Online_payment.png") !important;
   background-size: cover;
