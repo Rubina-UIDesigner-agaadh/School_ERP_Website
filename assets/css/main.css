@@ -3035,6 +3035,8 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 
 /* ============================================================
    40. RESTRUCTURED BOTTOM PANELS (SINGLE-COLUMN CENTERED)
+   Fixed: Overrides Section 19's image space reservation so
+   these panels use full width with balanced padding.
    ============================================================ */
 :is(
   .about-ast-closing-panel,
@@ -3046,16 +3048,37 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .attendance-closing-panel,
   .timetable-closing-panel
 ) {
-  padding: 40px 34px !important;
+  padding: 48px 40px !important;
   text-align: center !important;
-  max-width: 780px !important;
+  max-width: 860px !important;
   margin: 0 auto !important;
   border: 1px solid var(--card-border) !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: visible !important;
 }
 
+/* Override Section 19's large-screen image padding reservation */
+@media (min-width: 1200px) {
+  :is(
+    .about-ast-closing-panel,
+    .benefits-advantage-panel,
+    .approach-value-panel,
+    .school-erp-closing-panel,
+    .preschool-erp-closing-panel,
+    .admission-closing-panel,
+    .attendance-closing-panel,
+    .timetable-closing-panel
+  ) {
+    padding: 56px 48px !important;
+    padding-right: 48px !important;
+  }
+}
+
+/* Kill the decorative image blocks completely */
 :is(
   .about-ast-closing-panel,
   .benefits-advantage-panel,
@@ -3077,8 +3100,13 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .timetable-closing-panel
 )::after {
   display: none !important;
+  content: none !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
+/* Label pill - centered */
 :is(
   .about-ast-closing-panel,
   .benefits-advantage-panel,
@@ -3089,11 +3117,14 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .attendance-closing-panel,
   .timetable-closing-panel
 ) :is(span, [class*="-section-label"], [class$="-section-label"]) {
+  display: inline-flex !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 24px !important;
+  align-self: center !important;
 }
 
+/* Heading - centered with balanced width */
 :is(
   .about-ast-closing-panel,
   .benefits-advantage-panel,
@@ -3104,10 +3135,15 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   .attendance-closing-panel,
   .timetable-closing-panel
 ) h2 {
-  margin-bottom: 20px !important;
+  margin: 0 auto 24px !important;
   text-align: center !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  font-size: 2.1rem !important;
+  line-height: 1.25 !important;
 }
 
+/* Paragraphs - centered and readable */
 :is(
   .about-ast-closing-panel,
   .benefits-advantage-panel,
@@ -3123,8 +3159,40 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   margin-left: auto !important;
   margin-right: auto !important;
   line-height: 1.8 !important;
+  font-size: 1.02rem !important;
 }
 
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) p + p {
+  margin-top: 16px !important;
+}
+
+/* Lists - centered block */
+:is(
+  .about-ast-closing-panel,
+  .benefits-advantage-panel,
+  .approach-value-panel,
+  .school-erp-closing-panel,
+  .preschool-erp-closing-panel,
+  .admission-closing-panel,
+  .attendance-closing-panel,
+  .timetable-closing-panel
+) ul {
+  text-align: left !important;
+  max-width: 640px !important;
+  margin: 20px auto !important;
+  display: inline-block !important;
+}
+
+/* Buttons - centered with proper spacing */
 :is(
   .about-ast-closing-panel,
   .benefits-advantage-panel,
@@ -3148,6 +3216,36 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   margin-top: 28px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  align-self: center !important;
+}
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+  :is(
+    .about-ast-closing-panel,
+    .benefits-advantage-panel,
+    .approach-value-panel,
+    .school-erp-closing-panel,
+    .preschool-erp-closing-panel,
+    .admission-closing-panel,
+    .attendance-closing-panel,
+    .timetable-closing-panel
+  ) {
+    padding: 32px 24px !important;
+  }
+
+  :is(
+    .about-ast-closing-panel,
+    .benefits-advantage-panel,
+    .approach-value-panel,
+    .school-erp-closing-panel,
+    .preschool-erp-closing-panel,
+    .admission-closing-panel,
+    .attendance-closing-panel,
+    .timetable-closing-panel
+  ) h2 {
+    font-size: 1.65rem !important;
+  }
 }
 
 /* ============================================================
