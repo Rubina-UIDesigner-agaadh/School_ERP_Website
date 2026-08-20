@@ -528,42 +528,42 @@
       new PureCounter();
     }
 
-    // Ecosystem collage 3D tilt / parallax effect on mouse movement.
-    const ecosystemCollage = document.querySelector('#ecosystemCollage');
-    if (ecosystemCollage) {
+    // Ecosystem collage individual 3D tilt / parallax effect on mouse movement.
+    const collageCards = document.querySelectorAll('.ecosystem-collage-card');
+    collageCards.forEach(card => {
       let isHovered = false;
 
-      ecosystemCollage.addEventListener('mouseenter', () => {
+      card.addEventListener('mouseenter', () => {
         isHovered = true;
-        ecosystemCollage.classList.add('is-hovered');
+        card.classList.add('is-hovered');
       });
 
-      ecosystemCollage.addEventListener('mousemove', event => {
+      card.addEventListener('mousemove', event => {
         if (!isHovered) return;
-        const rect = ecosystemCollage.getBoundingClientRect();
+        const rect = card.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         const mouseX = event.clientX - centerX;
         const mouseY = event.clientY - centerY;
 
-        const maxTilt = 8;
+        const maxTilt = 10;
         const rotateX = (-mouseY / (rect.height / 2)) * maxTilt;
         const rotateY = (mouseX / (rect.width / 2)) * maxTilt;
 
-        ecosystemCollage.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.05, 1.05, 1.05)`;
       });
 
-      ecosystemCollage.addEventListener('mouseleave', () => {
+      card.addEventListener('mouseleave', () => {
         isHovered = false;
-        ecosystemCollage.classList.remove('is-hovered');
-        ecosystemCollage.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        card.classList.remove('is-hovered');
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
         setTimeout(() => {
           if (!isHovered) {
-            ecosystemCollage.style.transform = '';
+            card.style.transform = '';
           }
         }, 300);
       });
-    }
+    });
   }
 
   function start(){
