@@ -2191,6 +2191,105 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
   }
 }
 
+/* ============================================================
+   19. AST ECOSYSTEM COLLAGE & FLOATING ANIMATION
+   ============================================================ */
+.ast-home-ecosystem-section .ast-home-wide-panel::before,
+.ast-home-ecosystem-section .ast-home-wide-panel::after {
+  display: none !important;
+  content: none !important;
+}
+
+.ast-home-ecosystem-section .ast-home-wide-panel.ecosystem-panel-grid {
+  display: flex !important;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px !important;
+  max-width: 100% !important;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .ast-home-ecosystem-section .ast-home-wide-panel.ecosystem-panel-grid {
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .ast-home-ecosystem-section .ecosystem-panel-text {
+    flex: 1 1 52%;
+    max-width: 55%;
+    text-align: left !important;
+  }
+
+  .ast-home-ecosystem-section .ecosystem-collage-wrapper {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+.ecosystem-collage-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ecosystemFloat 7s ease-in-out infinite;
+  transform-origin: center center;
+  perspective: 1000px;
+}
+
+.ecosystem-collage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  border-radius: var(--radius-lg, 12px);
+  transition: transform 0.25s ease-out, filter 0.3s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform, filter;
+  filter: drop-shadow(0 10px 22px rgba(15, 23, 42, 0.12));
+  cursor: pointer;
+}
+
+.ecosystem-collage.is-hovered,
+.ecosystem-collage:hover {
+  filter: drop-shadow(0 22px 40px rgba(15, 23, 42, 0.22));
+}
+
+.ecosystem-collage-img {
+  flex: 1 1 0;
+  width: 33.333%;
+  max-width: 33.333%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@keyframes ecosystemFloat {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-6px) translateX(2px) rotate(0.4deg) scale(1.006);
+  }
+  50% {
+    transform: translateY(-10px) translateX(0px) rotate(-0.3deg) scale(1.012);
+  }
+  75% {
+    transform: translateY(-4px) translateX(-2px) rotate(0.3deg) scale(1.006);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+}
+
 @media (min-width: 1200px) {
   .main section:not(.hero) :is([class$="-intro-panel"], [class*="-intro-panel "], .about-ast-main-panel, .why-ast-main-panel, .ast-home-intro-panel) {
     padding: 48px min(39%, 500px) 48px 48px !important;
@@ -2209,35 +2308,6 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
     width: min(33%, 430px);
     height: calc(100% - 76px);
   }
-
-  /* Home ecosystem / closing CTA: optional images, only if those classes exist */
-  .ast-home-ecosystem-section .ast-home-wide-panel {
-    max-width: 100% !important;
-    padding: 48px min(34%, 410px) 48px 48px !important;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .ast-home-ecosystem-section .ast-home-wide-panel::before {
-    content: "" !important;
-    display: block !important;
-    position: absolute;
-    z-index: 1;
-    right: 28px;
-    top: 28px;
-    bottom: 28px;
-    width: min(27%, 340px);
-    background-image: url("../images/totalEcosystem.png") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .ast-home-ecosystem-section .ast-home-wide-panel::after { display: none !important; }
 
   .ast-home-closing-section .ast-home-closing-panel {
     max-width: 100% !important;
