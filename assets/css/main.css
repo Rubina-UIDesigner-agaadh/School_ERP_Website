@@ -2281,6 +2281,7 @@ main.main > section.section:not(.hero):not(.dark-background)::after { bottom: 0;
 .ecosystem-collage-card.is-hovered,
 .ecosystem-collage-card:hover {
   z-index: 10;
+  transform: translateY(-6px) scale(1.02);
   filter: drop-shadow(0 18px 36px rgba(15, 23, 42, 0.22));
   border: none !important;
   outline: none !important;
